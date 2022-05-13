@@ -9,13 +9,14 @@ onready var sprite = $AnimatedSprite
 func read_input():
 	velocity = Vector2()
 	
-	if Input.is_action_pressed("up"):
-		velocity.y -= 1
-		direction = Vector2(0, -1)
+	if Global.player2D == false:
+		if Input.is_action_pressed("up"):
+			velocity.y -= 1
+			direction = Vector2(0, -1)
 				
-	if Input.is_action_pressed("down"):
-		velocity.y += 1
-		direction = Vector2(0, 1)
+		if Input.is_action_pressed("down"):
+			velocity.y += 1
+			direction = Vector2(0, 1)
 				
 	if Input.is_action_pressed("left"):
 		velocity.x -= 1
@@ -32,6 +33,10 @@ func read_input():
 	
 func _physics_process(delta):
 	read_input()
+	
+	
+func player2d_alternate():
+	pass
 
 func update_animation():
 	if velocity.x > 0 :
