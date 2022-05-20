@@ -6,7 +6,7 @@ func ready():
 	Global.player2D = true
 	
 func _physics_process(delta):
-	if area_active[1] and Input.is_action_just_pressed("game_action"):
+	if area_active[1] and Input.is_action_just_pressed("interact"):
 		match area_active[0]:
 			1:
 				get_tree().change_scene("res://Scenes/Level_01.tscn")

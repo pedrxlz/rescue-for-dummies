@@ -9,7 +9,7 @@ onready var player_item = get_node('Item')
 var current_item
 
 var anim_status = 'walk'
-var on_item = true
+var on_item = false
 
 onready var sprite = $AnimatedSprite
 
@@ -54,8 +54,12 @@ func read_input():
 	velocity = velocity.normalized()
 	velocity = move_and_slide(velocity * walk_speed)
 	
+	print(position)
+	
 func _physics_process(delta):
 	read_input()
+	if Input.is_action_pressed("interact"):
+		drop_item()
 
 func update_animation(string):
 	if velocity.x > 0 :
@@ -76,16 +80,19 @@ func update_animation(string):
 	elif direction.y == 1:
 		sprite.play('idle-down')
 
-
-func pick_up_item(item: Area2D) -> void:
-	
-	player_item.add_child(current_item)
-	item.get_parent().call_deferred("remove_child", item)
-	item.call_deferred("add_child", item)
-	item.set_deferred("owner", item)
-	#current_item.hide()
+func pick_up_item(item: Node2D) -> void:
+	on_item = true
 	current_item = item
+	get_parent().remove_child(current_item)
+	player_item.add_child(current_item)
+
+func drop_item() -> void:
+	var item_to_drop: Node2D = current_item
+	player_item.remove_child(item_to_drop)
+	get_parent().add_child(item_to_drop)
+	item_to_drop.position = position
 	
+
 	
 	
 	
