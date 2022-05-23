@@ -10,7 +10,7 @@ func _ready():
 		pass
 
 func _on_PlayerDetector_body_entered(body):
-	if body != null:
+	if body == 'Player':
 		body.pick_up_item(self)
 		position = Vector2.ZERO
 	
