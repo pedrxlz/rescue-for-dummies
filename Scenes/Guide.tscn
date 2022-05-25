@@ -1,0 +1,175 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Assets/Items/GreenPotion.tres" type="Texture" id=1]
+[ext_resource path="res://Assets/Items/YellowPotion.tres" type="Texture" id=2]
+[ext_resource path="res://Assets/Items/Potion.tres" type="Texture" id=3]
+[ext_resource path="res://Assets/Items/BluePotion.tres" type="Texture" id=4]
+[ext_resource path="res://Assets/Fonts/Roboto-Regular.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Assets/Items/GreenGlass.tres" type="Texture" id=6]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 18
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.6, 0.6, 0.6, 0.494118 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Guide" type="CanvasLayer"]
+
+[node name="Panel" type="Panel" parent="."]
+anchor_left = 0.256
+anchor_top = 0.138
+anchor_right = 0.744
+anchor_bottom = 1.0
+margin_left = -0.144012
+margin_top = 0.199997
+margin_right = 0.143982
+custom_styles/panel = SubResource( 1 )
+
+[node name="BluePotion" type="TextureRect" parent="Panel"]
+margin_left = 66.0
+margin_top = 156.0
+margin_right = 105.0
+margin_bottom = 215.0
+texture = ExtResource( 4 )
+expand = true
+
+[node name="GreenGlass" type="TextureRect" parent="Panel"]
+margin_left = 68.0
+margin_top = 413.0
+margin_right = 107.0
+margin_bottom = 470.0
+texture = ExtResource( 6 )
+expand = true
+
+[node name="GreenPotion" type="TextureRect" parent="Panel"]
+margin_left = 66.0
+margin_top = 246.0
+margin_right = 110.0
+margin_bottom = 307.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="RedPotion" type="TextureRect" parent="Panel"]
+margin_left = 70.0
+margin_top = 65.0
+margin_right = 105.0
+margin_bottom = 116.0
+texture = ExtResource( 3 )
+expand = true
+
+[node name="YelloGlass" type="TextureRect" parent="Panel"]
+margin_left = 67.0
+margin_top = 331.0
+margin_right = 107.0
+margin_bottom = 390.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="Label" type="Label" parent="Panel"]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 150.0
+margin_top = 66.0
+margin_right = 450.0
+margin_bottom = 113.0
+rect_pivot_offset = Vector2( -238, 60 )
+custom_fonts/font = SubResource( 2 )
+text = "Estancar o sangramento, aplicando pressão com um pano."
+valign = 1
+autowrap = true
+
+[node name="Label2" type="Label" parent="Panel"]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 150.0
+margin_top = 176.0
+margin_right = 450.0
+margin_bottom = 198.0
+rect_pivot_offset = Vector2( -238, 60 )
+custom_fonts/font = SubResource( 2 )
+text = "Limpar a ferida para evitar infecções"
+autowrap = true
+
+[node name="Label3" type="Label" parent="Panel"]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 150.0
+margin_top = 261.0
+margin_right = 450.0
+margin_bottom = 283.0
+rect_pivot_offset = Vector2( -238, 60 )
+custom_fonts/font = SubResource( 2 )
+text = "Suturar a ferida."
+autowrap = true
+
+[node name="Label4" type="Label" parent="Panel"]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 150.0
+margin_top = 346.0
+margin_right = 450.0
+margin_bottom = 368.0
+rect_pivot_offset = Vector2( -238, 60 )
+custom_fonts/font = SubResource( 2 )
+text = "Realizar um curativo"
+autowrap = true
+
+[node name="Label5" type="Label" parent="Panel"]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 150.0
+margin_top = 433.0
+margin_right = 450.0
+margin_bottom = 455.0
+rect_pivot_offset = Vector2( -238, 60 )
+custom_fonts/font = SubResource( 2 )
+text = "Receitar vacina contra tétano"
+autowrap = true
+
+[node name="Panel" type="Panel" parent="Panel"]
+modulate = Color( 0, 0, 0, 0.498039 )
+margin_left = 40.0
+margin_top = 45.0
+margin_right = 480.0
+margin_bottom = 130.0
+custom_styles/panel = SubResource( 3 )
+
+[node name="Panel2" type="Panel" parent="Panel"]
+modulate = Color( 0, 0, 0, 0.498039 )
+margin_left = 40.0
+margin_top = 138.0
+margin_right = 480.0
+margin_bottom = 223.0
+custom_styles/panel = SubResource( 3 )
+
+[node name="Panel3" type="Panel" parent="Panel"]
+modulate = Color( 0, 0, 0, 0.498039 )
+margin_left = 40.0
+margin_top = 232.0
+margin_right = 480.0
+margin_bottom = 317.0
+custom_styles/panel = SubResource( 3 )
+
+[node name="Panel4" type="Panel" parent="Panel"]
+modulate = Color( 0, 0, 0, 0.498039 )
+margin_left = 40.0
+margin_top = 326.0
+margin_right = 480.0
+margin_bottom = 411.0
+custom_styles/panel = SubResource( 3 )
+
+[node name="Panel5" type="Panel" parent="Panel"]
+modulate = Color( 0, 0, 0, 0.498039 )
+margin_left = 40.0
+margin_top = 419.0
+margin_right = 480.0
+margin_bottom = 504.0
+custom_styles/panel = SubResource( 3 )

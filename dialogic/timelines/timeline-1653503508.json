@@ -1,0 +1,27 @@
+{
+	"events": [
+		{
+			"character": "character-1653502644.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Recebemos este paciente ao qual sofreu um corte de faca"
+		},
+		{
+			"character": "character-1653502644.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "O corte foi extenso e longitudinal...."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Use o procedimento correto e blablabla"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1653503508.json",
+		"name": "case1"
+	}
+}

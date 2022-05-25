@@ -1,0 +1,21 @@
+{
+	"events": [
+		{
+			"character": "character-1653502644.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "João!!! Seja muito bem vindo"
+		},
+		{
+			"character": "character-1653502644.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hoje você terá de lidar com alguns casos, preparado?"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1653503028.json",
+		"name": "first-geralt"
+	}
+}

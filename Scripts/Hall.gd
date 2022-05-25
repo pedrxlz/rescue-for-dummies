@@ -2,8 +2,10 @@ extends Node2D
 
 var area_active = [1, false]
 
+
 func ready():
 	Global.player2D = true
+	
 	
 func _physics_process(delta):
 	if area_active[1] and Input.is_action_just_pressed("interact"):
@@ -44,3 +46,13 @@ func _on_Level3_body_entered(body):
 func _on_Level3_body_exited(body):
 	if body.name == 'Player':
 		area_active = [3, false]
+
+
+func _on_Dialog_body_entered(body):
+	var dialog = Dialogic.start("first")
+	add_child(dialog)
+	
+
+func _on_Supervisor_body_entered(body):
+	var dialog = Dialogic.start("first-geralt")
+	add_child(dialog)

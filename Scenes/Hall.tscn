@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/Hall.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/morgue_tilesheet_0.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Supervisor.tscn" type="PackedScene" id=4]
 
 [sub_resource type="TileSet" id=1]
 0/name = "morgue_tilesheet_0.png 0"
@@ -751,6 +752,9 @@
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 79.5, 79 )
 
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 13.5, 45.5 )
+
 [node name="MainHall" type="Node2D"]
 script = ExtResource( 1 )
 
@@ -759,10 +763,10 @@ scale = Vector2( 5, 5 )
 tile_set = SubResource( 1 )
 cell_size = Vector2( 32, 32 )
 format = 1
-tile_data = PoolIntArray( -65539, 7, 0, -65538, 7, 0, -65537, 7, 0, -131072, 7, 0, -131071, 7, 0, -131070, 7, 0, -131069, 7, 0, -131068, 7, 0, -131067, 7, 0, -131066, 7, 0, -131065, 7, 0, -131064, 7, 0, -131063, 7, 0, -131062, 7, 0, -3, 7, 0, -2, 7, 0, -1, 7, 0, -65536, 7, 0, -65535, 30, 0, -65534, 7, 0, -65533, 7, 0, -65532, 30, 0, -65531, 7, 0, -65530, 7, 0, -65529, 30, 0, -65528, 7, 0, -65527, 7, 0, -65526, 7, 0, 65533, 0, 0, 65534, 0, 0, 65535, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0 )
+tile_data = PoolIntArray( -65542, 7, 0, -65541, 7, 0, -65540, 7, 0, -65539, 7, 0, -65538, 7, 0, -65537, 7, 0, -131072, 7, 0, -131071, 7, 0, -131070, 7, 0, -131069, 7, 0, -131068, 7, 0, -131067, 7, 0, -131066, 7, 0, -131065, 7, 0, -131064, 7, 0, -131063, 7, 0, -131062, 7, 0, -6, 7, 0, -5, 7, 0, -4, 7, 0, -3, 7, 0, -2, 7, 0, -1, 7, 0, -65536, 7, 0, -65535, 30, 0, -65534, 7, 0, -65533, 7, 0, -65532, 30, 0, -65531, 7, 0, -65530, 7, 0, -65529, 30, 0, -65528, 7, 0, -65527, 7, 0, -65526, 7, 0, 65530, 0, 0, 65531, 0, 0, 65532, 0, 0, 65533, 0, 0, 65534, 0, 0, 65535, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( -71, -25 )
+position = Vector2( -395, -36 )
 
 [node name="AnimatedSprite" parent="Player" index="0"]
 scale = Vector2( 4, 4 )
@@ -792,11 +796,24 @@ position = Vector2( 1200, -79 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level-3"]
 shape = SubResource( 2 )
 
+[node name="Dialog" type="Area2D" parent="."]
+position = Vector2( -63, 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dialog"]
+position = Vector2( -217, -37 )
+shape = SubResource( 3 )
+
+[node name="Supervisor" parent="." instance=ExtResource( 4 )]
+position = Vector2( 127, -39 )
+scale = Vector2( 4, 4 )
+
 [connection signal="body_entered" from="Level-1" to="." method="_on_Level1_body_entered"]
 [connection signal="body_exited" from="Level-1" to="." method="_on_Level1_body_exited"]
 [connection signal="body_entered" from="Level-2" to="." method="_on_Level2_body_entered"]
 [connection signal="body_exited" from="Level-2" to="." method="_on_Level2_body_exited"]
 [connection signal="body_entered" from="Level-3" to="." method="_on_Level3_body_entered"]
 [connection signal="body_exited" from="Level-3" to="." method="_on_Level3_body_exited"]
+[connection signal="body_entered" from="Dialog" to="." method="_on_Dialog_body_entered"]
+[connection signal="body_entered" from="Supervisor" to="." method="_on_Supervisor_body_entered"]
 
 [editable path="Player"]

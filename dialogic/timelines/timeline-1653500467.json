@@ -1,0 +1,27 @@
+{
+	"events": [
+		{
+			"character": "character-1653502620.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "...."
+		},
+		{
+			"character": "character-1653502620.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hoje é meu primeiro dia de estágio, sera que vou conseguir lidar com tudo?"
+		},
+		{
+			"character": "character-1653502620.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "o que vou aprender hoje?"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1653500467.json",
+		"name": "first"
+	}
+}
