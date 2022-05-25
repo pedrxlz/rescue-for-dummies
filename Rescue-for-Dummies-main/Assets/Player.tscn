@@ -1,0 +1,245 @@
+[gd_scene load_steps=69 format=2]
+
+[ext_resource path="res://Assets/lablady_spritesheet_BOXED.png" type="Texture" id=1]
+[ext_resource path="res://Assets/walk/walk-right/01.tres" type="Texture" id=2]
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=3]
+[ext_resource path="res://Assets/walk/walk-right/02.tres" type="Texture" id=4]
+[ext_resource path="res://Assets/walk/walk-right/03.tres" type="Texture" id=5]
+[ext_resource path="res://Assets/walk/walk-right/04.tres" type="Texture" id=6]
+[ext_resource path="res://Assets/walk/walk-up/01.tres" type="Texture" id=7]
+[ext_resource path="res://Assets/walk/walk-up/04.tres" type="Texture" id=8]
+[ext_resource path="res://Assets/walk/walk-up/02.tres" type="Texture" id=9]
+[ext_resource path="res://Assets/walk/walk-up/03.tres" type="Texture" id=10]
+[ext_resource path="res://Assets/walk/walk-down/01.tres" type="Texture" id=11]
+[ext_resource path="res://Assets/walk/walk-down/03.tres" type="Texture" id=12]
+[ext_resource path="res://Assets/walk/walk-down/04.tres" type="Texture" id=13]
+[ext_resource path="res://Assets/walk/walk-down/02.tres" type="Texture" id=14]
+[ext_resource path="res://Assets/walk/walk-left/01.tres" type="Texture" id=15]
+[ext_resource path="res://Assets/walk/walk-left/02.tres" type="Texture" id=16]
+[ext_resource path="res://Assets/walk/walk-left/04.tres" type="Texture" id=17]
+[ext_resource path="res://Assets/walk/walk-left/03.tres" type="Texture" id=18]
+[ext_resource path="res://Assets/run/run-down/04.tres" type="Texture" id=19]
+[ext_resource path="res://Assets/run/run-right/01.tres" type="Texture" id=20]
+[ext_resource path="res://Assets/run/run-down/03.tres" type="Texture" id=21]
+[ext_resource path="res://Assets/run/run-up/03.tres" type="Texture" id=22]
+[ext_resource path="res://Assets/run/run-down/02.tres" type="Texture" id=23]
+[ext_resource path="res://Assets/run/run-up/01.tres" type="Texture" id=24]
+[ext_resource path="res://Assets/run/run-down/01.tres" type="Texture" id=25]
+[ext_resource path="res://Assets/run/run-up/04.tres" type="Texture" id=26]
+[ext_resource path="res://Assets/run/run-right/02.tres" type="Texture" id=27]
+[ext_resource path="res://Assets/run/run-right/03.tres" type="Texture" id=28]
+[ext_resource path="res://Assets/run/run-left/04.tres" type="Texture" id=29]
+[ext_resource path="res://Assets/run/run-left/02.tres" type="Texture" id=30]
+[ext_resource path="res://Assets/run/run-right/04.tres" type="Texture" id=31]
+[ext_resource path="res://Assets/run/run-up/02.tres" type="Texture" id=32]
+[ext_resource path="res://Assets/run/run-left/03.tres" type="Texture" id=33]
+[ext_resource path="res://Assets/run/run-left/01.tres" type="Texture" id=34]
+[ext_resource path="res://Assets/run/run-up/06.tres" type="Texture" id=35]
+[ext_resource path="res://Assets/run/run-down/05.tres" type="Texture" id=36]
+[ext_resource path="res://Assets/run/run-left/06.tres" type="Texture" id=37]
+[ext_resource path="res://Assets/run/run-right/06.tres" type="Texture" id=38]
+[ext_resource path="res://Assets/run/run-up/05.tres" type="Texture" id=39]
+[ext_resource path="res://Assets/run/run-down/06.tres" type="Texture" id=40]
+[ext_resource path="res://Assets/run/run-right/05.tres" type="Texture" id=41]
+[ext_resource path="res://Assets/run/run-left/05.tres" type="Texture" id=42]
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 1 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 160, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 1 )
+region = Rect2( 32, 160, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 1 )
+region = Rect2( 64, 160, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=26]
+atlas = ExtResource( 1 )
+region = Rect2( 96, 160, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 1 )
+region = Rect2( 32, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 96, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 1 )
+region = Rect2( 32, 96, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 1 )
+region = Rect2( 32, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=27]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 224, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=28]
+atlas = ExtResource( 1 )
+region = Rect2( 32, 224, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=29]
+atlas = ExtResource( 1 )
+region = Rect2( 64, 224, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=30]
+atlas = ExtResource( 1 )
+region = Rect2( 96, 224, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 128, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 1 )
+region = Rect2( 32, 128, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 1 )
+region = Rect2( 64, 128, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 1 )
+region = Rect2( 96, 128, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 192, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 1 )
+region = Rect2( 32, 192, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 1 )
+region = Rect2( 64, 192, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 1 )
+region = Rect2( 96, 192, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=13]
+animations = [ {
+"frames": [ ExtResource( 24 ), ExtResource( 32 ), ExtResource( 22 ), ExtResource( 26 ), ExtResource( 39 ), ExtResource( 35 ) ],
+"loop": true,
+"name": "run-up",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 25 ), ExtResource( 23 ), ExtResource( 21 ), ExtResource( 19 ), ExtResource( 36 ), ExtResource( 40 ) ],
+"loop": true,
+"name": "run-down",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 3 ), SubResource( 4 ) ],
+"loop": true,
+"name": "idle-left",
+"speed": 3.0
+}, {
+"frames": [ SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ) ],
+"loop": true,
+"name": "push-left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "walk-up",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 14 ), ExtResource( 12 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "walk-down",
+"speed": 3.0
+}, {
+"frames": [ SubResource( 5 ), SubResource( 6 ) ],
+"loop": true,
+"name": "idle-down",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 34 ), ExtResource( 30 ), ExtResource( 33 ), ExtResource( 29 ), ExtResource( 42 ), ExtResource( 37 ) ],
+"loop": true,
+"name": "run-left",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 1 ), SubResource( 2 ) ],
+"loop": true,
+"name": "idle-up",
+"speed": 3.0
+}, {
+"frames": [ SubResource( 7 ), SubResource( 8 ) ],
+"loop": true,
+"name": "idle-right",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 20 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 31 ), ExtResource( 41 ), ExtResource( 38 ) ],
+"loop": true,
+"name": "run-right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "walk-right",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 18 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "walk-left",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ) ],
+"loop": true,
+"name": "push-up",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ) ],
+"loop": true,
+"name": "push-right",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ) ],
+"loop": true,
+"name": "push-down",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=14]
+radius = 4.0
+height = 22.0
+
+[node name="Player" type="KinematicBody2D"]
+script = ExtResource( 3 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 1.1, 1.1 )
+frames = SubResource( 13 )
+animation = "push-up"
+frame = 2
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 14 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 0.4, 0.4 )
+smoothing_enabled = true
