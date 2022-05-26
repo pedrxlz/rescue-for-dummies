@@ -1,7 +1,9 @@
 extends Node
 
-var equippedItem;
+var equippedItem = null
 var on_item = false
+var player_move = true
+
 
 var player2D;
 

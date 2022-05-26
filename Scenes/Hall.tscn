@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/Hall.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Characters/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/morgue_tilesheet_0.png" type="Texture" id=3]
-[ext_resource path="res://Scenes/Supervisor.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Characters/Supervisor.tscn" type="PackedScene" id=4]
 
 [sub_resource type="TileSet" id=1]
 0/name = "morgue_tilesheet_0.png 0"
@@ -771,6 +771,7 @@ position = Vector2( -395, -36 )
 [node name="AnimatedSprite" parent="Player" index="0"]
 scale = Vector2( 4, 4 )
 animation = "idle-right"
+frame = 0
 
 [node name="InteractionHitBox" parent="Player" index="1"]
 scale = Vector2( 4, 4 )

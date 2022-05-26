@@ -11,6 +11,7 @@ var current_item
 var anim_status = 'walk'
 
 
+
 onready var sprite = $AnimatedSprite
 
 func _ready():
@@ -55,9 +56,15 @@ func read_input():
 
 	
 func _physics_process(delta):
-	read_input()
+	if Global.player_move:
+		read_input()
+	
+	elif !Global.player_move:
+		sprite.play('idle-right')
+	
 	if Input.is_action_pressed("interact") and Global.on_item:
 		drop_item()
+		
 
 func update_animation(string):
 	if velocity.x > 0 :
@@ -90,6 +97,9 @@ func drop_item() -> void:
 	player_item.remove_child(item_to_drop)
 	get_parent().add_child(item_to_drop)
 	item_to_drop.position = position
+	Global.equippedItem = null
+	
+	
 	
 
 	
