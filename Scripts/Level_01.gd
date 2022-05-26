@@ -5,6 +5,8 @@ var guide_toggle = false
 func _ready():
 	Global.player2D = false
 	$HUD/Panel.hide()	
+	var dialog = Dialogic.start("case1")
+	add_child(dialog)
 
 func _physics_process(delta):
 	if Input.is_action_just_pressed("guide") and guide_toggle == false:
@@ -14,6 +16,3 @@ func _physics_process(delta):
 		guide_toggle = false
 		$HUD/Panel.hide()	
 
-func _on_Supervisor_body_entered(body):
-	var dialog = Dialogic.start("case1")
-	add_child(dialog)

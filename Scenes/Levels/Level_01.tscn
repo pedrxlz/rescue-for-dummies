@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Scenes/Characters/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/morgue_tilesheet_0.png" type="Texture" id=2]
@@ -10,6 +10,9 @@
 [ext_resource path="res://Items/YellowPotion.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Characters/Supervisor.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Guide.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Sounds/error_007.ogg" type="AudioStream" id=11]
+[ext_resource path="res://Sounds/powerUp2.ogg" type="AudioStream" id=12]
+[ext_resource path="res://Items/GreenGlass.tscn" type="PackedScene" id=13]
 
 [sub_resource type="ConvexPolygonShape2D" id=9]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -423,7 +426,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 extents = Vector2( 14.5, 15.5 )
 
 [node name="Level-1" type="Node2D"]
-position = Vector2( 584, 250 )
+position = Vector2( 595, 248 )
 script = ExtResource( 3 )
 
 [node name="Floor" type="TileMap" parent="."]
@@ -460,11 +463,11 @@ tile_data = PoolIntArray( -131080, 0, 0, -131079, 0, 0, -131078, 0, 0, -131077, 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( -78, -33 )
 
-[node name="Potion" parent="." instance=ExtResource( 4 )]
-position = Vector2( -31, 38 )
+[node name="RedPotion" parent="." instance=ExtResource( 4 )]
+position = Vector2( -179, -18 )
 
 [node name="BluePotion" parent="." instance=ExtResource( 5 )]
-position = Vector2( -129, 36 )
+position = Vector2( -166, -18 )
 
 [node name="PatientBody" type="Area2D" parent="."]
 script = ExtResource( 6 )
@@ -473,18 +476,30 @@ script = ExtResource( 6 )
 position = Vector2( -79.5, 79.5 )
 shape = SubResource( 12 )
 
+[node name="WrongItem" type="AudioStreamPlayer" parent="PatientBody"]
+stream = ExtResource( 11 )
+
+[node name="RightItem" type="AudioStreamPlayer" parent="PatientBody"]
+stream = ExtResource( 12 )
+
 [node name="GreenPotion" parent="." instance=ExtResource( 7 )]
-position = Vector2( -84, 31 )
+position = Vector2( -194, -18 )
 
 [node name="YellowPotion" parent="." instance=ExtResource( 8 )]
-position = Vector2( 28, 19 )
+position = Vector2( -213, -19 )
+
+[node name="GreenGlass" parent="." instance=ExtResource( 13 )]
+position = Vector2( -155, -18 )
 
 [node name="Supervisor" parent="." instance=ExtResource( 9 )]
+position = Vector2( -30, -33 )
 
 [node name="HUD" parent="." instance=ExtResource( 10 )]
 
+[node name="Panel" parent="HUD" index="0"]
+visible = false
+
 [connection signal="body_entered" from="PatientBody" to="PatientBody" method="_on_PatientBody_body_entered"]
-[connection signal="body_entered" from="Supervisor" to="." method="_on_Supervisor_body_entered"]
 
 [editable path="Player"]
 [editable path="HUD"]
