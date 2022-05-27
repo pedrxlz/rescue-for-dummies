@@ -1,5 +1,6 @@
 extends KinematicBody2D
 
+
 var velocity : Vector2 = Vector2()
 var direction : Vector2 = Vector2()
 var walk_speed = 100
@@ -26,6 +27,8 @@ func _ready():
 	current_item = player_item.get_child(0)
 	Socket.connect_to_server()
 	
+	Socket.connect("idle1", self, "_on_idle1")
+	Socket.connect("idle2", self, "_on_idle2")
 	Socket.connect("right", self, "_on_right")
 	Socket.connect("left", self, "_on_left")
 	Socket.connect("up", self, "_on_up")
@@ -34,28 +37,43 @@ func _ready():
 	Socket.connect("btnRed", self, "_on_btnRed")
 	Socket.connect("btnGreen", self, "_on_btnGreen")
 
-func _on_right():
-	print("cheguei aqui!!")
+func _on_idle1(node):
+	up = false
+	down = false
+	btn = false
+	btnRed = false
+	btnGreen = false
+
+func _on_idle2(node):
+	right = false
+	left = false	
+	btn = false
+	btnRed = false
+	btnGreen = false
+	
+func _on_right(body):
 	right = true
 	
-func _on_left():
-	print("cheguei aqui!!")
+func _on_left(body):
 	left = true	
 
-func _on_up():
-	print("cheguei aqui!!")
+func _on_up(body):
 	up = true
 
-func _on_down():
+func _on_down(body):
 	down = true
 
-func _on_btn():
+func _on_btn(body):
 	btn = true
 
-func _on_btnRed():
+func _on_btnRed(body):
+	var ev = InputEventAction.new()
+	ev.action = "interact"
+	ev.pressed = true
+	Input.parse_input_event(ev)
 	btnRed = true
 
-func _on_btnGreen():
+func _on_btnGreen(body):
 	btnGreen = true
 
 
@@ -103,13 +121,6 @@ func read_input():
 
 	
 func _physics_process(delta):
-#	right = false
-#	left = false	
-#	up = false
-#	down = false
-#	btn = false
-#	btnRed = false
-#	btnGreen = false
 	
 	if Global.player_move:
 		read_input()
@@ -117,7 +128,7 @@ func _physics_process(delta):
 	elif !Global.player_move:
 		sprite.play('idle-right')
 	
-	if Input.is_action_pressed("interact") and Global.on_item:
+	if (Input.is_action_pressed("interact") or btnRed) and Global.on_item:
 		drop_item()
 		
 
@@ -154,8 +165,10 @@ func drop_item() -> void:
 	item_to_drop.position = position
 	Global.equippedItem = null
 	
-	
-	
+
+
+
+
 
 	
 	

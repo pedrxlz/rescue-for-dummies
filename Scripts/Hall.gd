@@ -9,7 +9,7 @@ func ready():
 	
 	
 func _physics_process(delta):
-	if area_active[1] and Input.is_action_just_pressed("interact"):
+	if area_active[1] and (Input.is_action_just_pressed("interact") or get_node("Player").get("btnGreen")) :
 		match area_active[0]:
 			1:
 				get_tree().change_scene("res://Scenes/Levels/Level_01.tscn")

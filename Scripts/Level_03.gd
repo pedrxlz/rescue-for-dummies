@@ -4,14 +4,14 @@ var guide_toggle = false
 
 func _ready():
 	Global.player2D = false
-	var dialog = Dialogic.start("case1")
+	var dialog = Dialogic.start("case3")
 	add_child(dialog)
 
 func _physics_process(delta):
 	if (Input.is_action_just_pressed("guide") or get_node("Player").get("btnGreen")) and guide_toggle == false:
 		guide_toggle = true
-		$"HUD/case-1".show()
+		$"HUD/case-3".show()
 	elif (Input.is_action_just_pressed("guide") or get_node("Player").get("btnGreen")) and guide_toggle == true:
 		guide_toggle = false
-		$"HUD/case-1".hide()	
+		$"HUD/case-3".hide()	
 

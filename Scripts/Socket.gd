@@ -4,6 +4,8 @@ var client
 var connected = false
 var text = ""
 
+signal idle1
+signal idle2
 signal right
 signal left
 signal up
@@ -63,10 +65,14 @@ func on_text_received(text):
 	if command_array.size() < 2:
 		return
 	
+	if command_array[0] == "Idle":
+		emit_signal("idle1", self)
 	if command_array[0] == "Up":
-		emit_signal("Up", self)
+		emit_signal("up", self)
 	if command_array[0] == "Down":
-		emit_signal("Down", self)	
+		emit_signal("down", self)	
+	if command_array[1] == "Idle":
+		emit_signal("idle2", self)
 	if command_array[1] == "Right":
 		emit_signal("right", self)
 	if command_array[1] == "Left":
