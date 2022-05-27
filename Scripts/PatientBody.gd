@@ -1,4 +1,13 @@
 extends Area2D
+		
+
+#var caso2 = ["PurplePotion", "BluePotion", "RedPotion"]
+
+#func verificaCaso(vetor):
+#	if vetor[counter] == Global.equippedItem:
+#		counter += 1
+
+
 
 var counter = 0
 var max_health = 3
