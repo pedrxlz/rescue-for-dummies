@@ -4,19 +4,19 @@
 			"character": "character-1653502644.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Recebemos este paciente ao qual sofreu um corte de faca"
+			"text": "João, acabou de chegar um paciente ao pronto socorro, com um ferimento de facada, a lesão foi profunda e longitudinal."
 		},
 		{
 			"character": "character-1653502644.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "O corte foi extenso e longitudinal...."
+			"text": "Siga seus conhecimentos e o protocolo que lhe foi ensinado para atender o paciente."
 		},
 		{
-			"character": "",
+			"character": "character-1653502644.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Use o procedimento correto e blablabla"
+			"text": "Em caso de duvidas consulte o seu Guia de protocolo!"
 		}
 	],
 	"metadata": {

@@ -10,13 +10,25 @@
 			"character": "character-1653502620.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Hoje é meu primeiro dia de estágio, sera que vou conseguir lidar com tudo?"
+			"text": "Primeiro dia de estágio.... "
 		},
 		{
 			"character": "character-1653502620.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "o que vou aprender hoje?"
+			"text": "nossa...."
+		},
+		{
+			"character": "character-1653502620.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "sera que vou conseguir lidar com tudo?"
+		},
+		{
+			"character": "character-1653502620.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "mas vamos lá né, como diria Derek Shepard \"Hoje é um belo dia para salvar vidas\" "
 		}
 	],
 	"metadata": {

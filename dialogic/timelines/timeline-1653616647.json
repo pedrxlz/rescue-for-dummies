@@ -1,0 +1,21 @@
+{
+	"events": [
+		{
+			"character": "character-1653502644.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "João, precisamos da sua ajuda com esse paciente, ele chegou com uma fratura exposta, após pular de paraquedas. "
+		},
+		{
+			"character": "character-1653502620.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Siga os protocolos para ajudar o paciente."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1653616647.json",
+		"name": "case3"
+	}
+}
