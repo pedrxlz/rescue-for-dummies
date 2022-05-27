@@ -91,6 +91,7 @@ run/main_scene="res://Scenes/Hall.tscn"
 
 [autoload]
 
+Socket="*res://Scripts/Socket.gd"
 Global="*res://Scripts/Global.gd"
 PluginSettings="*res://addons/github-integration/scripts/PluginSettings.gd"
 IconLoaderGithub="*res://addons/github-integration/scripts/IconLoaderGithub.gd"
