@@ -67,7 +67,7 @@ _global_script_classes=[ {
 "base": "Area2D",
 "class": "Item",
 "language": "GDScript",
-"path": "res://Scripts/Item.gd"
+"path": "res://Scripts/Characters/Player/Item.gd"
 } ]
 _global_script_class_icons={
 "DTS": "",
@@ -87,11 +87,11 @@ _global_script_class_icons={
 [application]
 
 config/name="Rescue for Dummies"
-run/main_scene="res://Scenes/Hall.tscn"
+run/main_scene="res://Scenes/Levels/Hall.tscn"
 
 [autoload]
 
-Socket="*res://Scripts/Socket.gd"
+Socket="*res://Scripts/WebSocket.gd"
 Global="*res://Scripts/Global.gd"
 PluginSettings="*res://addons/github-integration/scripts/PluginSettings.gd"
 IconLoaderGithub="*res://addons/github-integration/scripts/IconLoaderGithub.gd"

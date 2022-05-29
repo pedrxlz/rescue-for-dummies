@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Scenes/Characters/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/morgue_tilesheet_0.png" type="Texture" id=2]
-[ext_resource path="res://Scripts/Levels/Level_01.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Levels/Level_02.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/Items/RedPotion.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Items/BluePotion.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scripts/Characters/Patient/PatientBody.gd" type="Script" id=6]
@@ -425,7 +425,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 [sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 14.5, 15.5 )
 
-[node name="Level-1" type="Node2D"]
+[node name="Level-2" type="Node2D"]
 position = Vector2( 595, 248 )
 script = ExtResource( 3 )
 
@@ -462,6 +462,9 @@ tile_data = PoolIntArray( -131080, 0, 0, -131079, 0, 0, -131078, 0, 0, -131077, 
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( -78, -33 )
+
+[node name="AnimatedSprite" parent="Player" index="0"]
+frame = 1
 
 [node name="RedPotion" parent="." instance=ExtResource( 4 )]
 position = Vector2( -179, -18 )
