@@ -4,7 +4,7 @@
 			"character": "character-1653502644.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "João, acabou de chegar um paciente ao pronto socorro, com um ferimento de facada, a lesão foi profunda e longitudinal."
+			"text": "João, acabou de chegar um paciente ao pronto socorro com um ferimento de facada, a lesão foi profunda e longitudinal."
 		},
 		{
 			"character": "character-1653502644.json",
@@ -16,7 +16,7 @@
 			"character": "character-1653502644.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Em caso de duvidas consulte o seu Guia de protocolo!"
+			"text": "Em caso de duvidas consulte o seu guia de protocolo."
 		}
 	],
 	"metadata": {

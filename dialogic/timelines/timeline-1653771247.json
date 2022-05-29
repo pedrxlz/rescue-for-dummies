@@ -1,0 +1,21 @@
+{
+	"events": [
+		{
+			"character": "character-1653502644.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "João, urgente!!! Paciente vítima de acidente de avião acabou de chegar ao pronto socorro com suspeitas de politraumatismo. "
+		},
+		{
+			"character": "character-1653502644.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Identifique as prioridades de risco por meio do protocolo XABCDE ao qual foi lhe ensinado anteriormente.\nEm seguida realize o tratamento posterior conforme identificado."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1653771247.json",
+		"name": "case5"
+	}
+}
