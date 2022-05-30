@@ -10,9 +10,11 @@ func _ready():
 	add_child(dialog)
 
 func _physics_process(delta):
-	if (Input.is_action_just_pressed("guide") or get_node("Player").get("btnGreen")) and guide_toggle == false:
+	if (Input.is_action_just_pressed("guide") or Global.btnGreen) and guide_toggle == false:
 		guide_toggle = true
 		$"HUD/case-2".show()
-	elif (Input.is_action_just_pressed("guide") or get_node("Player").get("btnGreen")) and guide_toggle == true:
+		Global.btnGreen = false
+	elif (Input.is_action_just_pressed("guide") or Global.btnGreen) and guide_toggle == true:
 		guide_toggle = false
 		$"HUD/case-2".hide()	
+		Global.btnGreen = false
