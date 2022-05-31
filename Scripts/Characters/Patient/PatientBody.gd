@@ -14,6 +14,7 @@ func _ready():
 
 func _process(delta):
 	if patient_health == 0:
+		get_parent().get_node('Player').drop_item()
 		get_tree().change_scene("res://Scenes/Levels/Hall.tscn")
 	
 func _on_PatientBody_body_entered(body, aux = counter):
