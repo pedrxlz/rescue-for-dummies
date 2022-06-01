@@ -23,6 +23,8 @@ func _on_PatientBody_body_entered(body, aux = counter):
 		$RightItem.play()
 		
 	if counter == current_protocol.size():
+		Global.game_progress += 1
+		get_parent().get_node('Player').drop_item()
 		get_tree().change_scene("res://Scenes/Levels/Hall.tscn")
 	
 	elif aux == counter and Global.equippedItem:
