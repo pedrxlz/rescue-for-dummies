@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Scenes/Characters/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/morgue_tilesheet_0.png" type="Texture" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Sounds/error_007.ogg" type="AudioStream" id=11]
 [ext_resource path="res://Sounds/powerUp2.ogg" type="AudioStream" id=12]
 [ext_resource path="res://Scenes/Items/GreenGlass.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/Items/PurplePotion.tscn" type="PackedScene" id=14]
 
 [sub_resource type="ConvexPolygonShape2D" id=9]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -495,6 +496,12 @@ position = Vector2( -155, -18 )
 position = Vector2( -30, -33 )
 
 [node name="HUD" parent="." instance=ExtResource( 10 )]
+
+[node name="case-3" parent="HUD" index="2"]
+visible = false
+
+[node name="PurplePotion" parent="." instance=ExtResource( 14 )]
+position = Vector2( -234, -18 )
 
 [connection signal="body_entered" from="PatientBody" to="PatientBody" method="_on_PatientBody_body_entered"]
 
