@@ -4,7 +4,7 @@
 			"character": "character-1653502644.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "João, temos um novo paciente que sofreu acidente de grave de moto, é preciso saber como fazer a avaliação inicial de todos os possíveis traumas, como garantir estabilidade e salvar a vida dessa pessoa.\nExecute o padrão de atendimento Advanced Trauma Life Support (ATLS) – Suporte de Vida Avançado no Trauma, para identificar as prioridades de trauma."
+			"text": "João, temos um novo paciente que sofreu acidente de grave de moto, é preciso saber como fazer a avaliação inicial de todos os possíveis traumas, como garantir estabilidade e salvar a vida dessa pessoa.\nExecute o padrão de atendimento XABCDE – Suporte de Vida Avançado no Trauma, para identificar as prioridades de trauma."
 		}
 	],
 	"metadata": {

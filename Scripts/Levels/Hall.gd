@@ -7,7 +7,7 @@ func _ready():
 	
 	match Global.game_progress:
 		1:
-			get_node('Player').position.x = 365
+			get_node('Player').position.x = 365	
 		2:
 			get_node('Player').position.x = 836.7
 		3:
@@ -20,19 +20,18 @@ func _physics_process(delta):
 	if area_active[1] and (Input.is_action_just_pressed("interact") or Global.btnGreen) :
 		match area_active[0]:
 			1:
-				if Global.game_progress == 0:
 					get_tree().change_scene("res://Scenes/Levels/Level_01.tscn")
 			2:
-				if Global.game_progress == 1:
+				if Global.game_progress <= 1:
 					get_tree().change_scene("res://Scenes/Levels/Level_02.tscn")
 			3:
-				if Global.game_progress == 2:
+				if Global.game_progress <= 2:
 					get_tree().change_scene("res://Scenes/Levels/Level_03.tscn")	
 			4:
-				if Global.game_progress == 3:
+				if Global.game_progress <= 3:
 					get_tree().change_scene("res://Scenes/Levels/Level_04.tscn")	
 			5:
-				if Global.game_progress == 4:
+				if Global.game_progress <= 4:
 					get_tree().change_scene("res://Scenes/Levels/Level_05.tscn")	
 		Global.btnGreen = false
 

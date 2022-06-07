@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Scenes/Characters/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/morgue_tilesheet_0.png" type="Texture" id=2]
@@ -13,6 +13,9 @@
 [ext_resource path="res://Sounds/error_007.ogg" type="AudioStream" id=11]
 [ext_resource path="res://Sounds/powerUp2.ogg" type="AudioStream" id=12]
 [ext_resource path="res://Scenes/Items/GreenGlass.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/Items/PurpleGlass.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Sounds/powerUp12.ogg" type="AudioStream" id=15]
+[ext_resource path="res://Sounds/jingles_PIZZA07.ogg" type="AudioStream" id=16]
 
 [sub_resource type="ConvexPolygonShape2D" id=9]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -460,9 +463,6 @@ cell_size = Vector2( 32, 32 )
 format = 1
 tile_data = PoolIntArray( -131080, 0, 0, -131079, 0, 0, -131078, 0, 0, -131077, 0, 0, -131076, 0, 0, -131075, 0, 0, -131074, 0, 0, -131073, 0, 0, -196608, 0, 0, -196607, 0, 0, -196606, 0, 0, -131070, 0, 0, -8, 0, 0, -65534, 0, 0, -65531, 0, 0, 65528, 0, 0, 2, 0, 0, 131064, 0, 0, 65538, 0, 0, 196600, 0, 0, 131074, 0, 0, 262136, 0, 0, 196610, 0, 0, 327672, 0, 0, 327673, 0, 0, 327674, 0, 0, 327675, 0, 0, 327676, 0, 0, 327677, 0, 0, 327678, 0, 0, 327679, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0 )
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( -80, -33 )
-
 [node name="RedPotion" parent="." instance=ExtResource( 4 )]
 position = Vector2( -179, -18 )
 
@@ -482,11 +482,17 @@ stream = ExtResource( 11 )
 [node name="RightItem" type="AudioStreamPlayer" parent="PatientBody"]
 stream = ExtResource( 12 )
 
+[node name="LevelCompleted" type="AudioStreamPlayer" parent="PatientBody"]
+stream = ExtResource( 15 )
+
+[node name="Fail" type="AudioStreamPlayer2D" parent="PatientBody"]
+stream = ExtResource( 16 )
+
 [node name="GreenPotion" parent="." instance=ExtResource( 7 )]
 position = Vector2( -194, -18 )
 
 [node name="YellowPotion" parent="." instance=ExtResource( 8 )]
-position = Vector2( -213, -19 )
+position = Vector2( -209, -19 )
 
 [node name="GreenGlass" parent="." instance=ExtResource( 13 )]
 position = Vector2( -155, -18 )
@@ -494,9 +500,18 @@ position = Vector2( -155, -18 )
 [node name="Supervisor" parent="." instance=ExtResource( 9 )]
 position = Vector2( -30, -33 )
 
+[node name="PurpleGlass" parent="." instance=ExtResource( 14 )]
+position = Vector2( -225, -19 )
+
 [node name="HUD" parent="." instance=ExtResource( 10 )]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( -80, -33 )
+
+[node name="AnimatedSprite" parent="Player" index="0"]
+frame = 1
 
 [connection signal="body_entered" from="PatientBody" to="PatientBody" method="_on_PatientBody_body_entered"]
 
-[editable path="Player"]
 [editable path="HUD"]
+[editable path="Player"]

@@ -94,6 +94,7 @@ func read_input():
 
 	
 func _physics_process(delta):
+	print(position)
 	if Global.player_move:
 		read_input()
 

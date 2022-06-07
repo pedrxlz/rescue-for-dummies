@@ -16,6 +16,7 @@ func _process(delta):
 	if patient_health == 0:
 		get_parent().get_node('Player').drop_item()
 		get_tree().change_scene("res://Scenes/Levels/Hall.tscn")
+		$Fail.play()
 	
 func _on_PatientBody_body_entered(body, aux = counter):
 	if body.name == "Player" and Global.equippedItem == current_protocol[counter]:
@@ -25,7 +26,12 @@ func _on_PatientBody_body_entered(body, aux = counter):
 	if counter == current_protocol.size():
 		Global.game_progress += 1
 		get_parent().get_node('Player').drop_item()
-		get_tree().change_scene("res://Scenes/Levels/Hall.tscn")
+		if Global.game_progress > 4:
+			Global.game_progress = 0
+			get_tree().change_scene("res://Scenes/EndGame.tscn")
+		else:
+			get_tree().change_scene("res://Scenes/Levels/Hall.tscn")
+			$LevelCompleted.play()
 	
 	elif aux == counter and Global.equippedItem:
 		patient_health -= 1

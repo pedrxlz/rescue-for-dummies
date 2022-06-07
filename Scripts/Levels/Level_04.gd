@@ -2,7 +2,7 @@ extends Node2D
 
 var guide_toggle = false
 
-var protocol_sequence = ["BluePotion", "RedPotion", "GreenPotion", "YellowPotion", "GreenGlass"]
+var protocol_sequence = ["RedPotion", "BluePotion", "GreenGlass", "YellowPotion", "GreenPotion", "PurpleGlass"]
 
 func _ready():
 	Global.player2D = false
